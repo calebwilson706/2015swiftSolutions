@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AB3D45C125DD756E001B9893 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D45C025DD756E001B9893 /* main.swift */; };
+		AB3D45C925DD7583001B9893 /* day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D45C825DD7583001B9893 /* day2.swift */; };
+		AB3D45CC25DD878E001B9893 /* day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D45CB25DD878E001B9893 /* day3.swift */; };
+		AB3D45CF25DDA33B001B9893 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D45CE25DDA33B001B9893 /* helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		AB3D45BD25DD756E001B9893 /* 2015swiftSolutions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 2015swiftSolutions; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3D45C025DD756E001B9893 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AB3D45C825DD7583001B9893 /* day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day2.swift; sourceTree = "<group>"; };
+		AB3D45CB25DD878E001B9893 /* day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day3.swift; sourceTree = "<group>"; };
+		AB3D45CE25DDA33B001B9893 /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				AB3D45C025DD756E001B9893 /* main.swift */,
+				AB3D45C825DD7583001B9893 /* day2.swift */,
+				AB3D45CB25DD878E001B9893 /* day3.swift */,
+				AB3D45CE25DDA33B001B9893 /* helpers.swift */,
 			);
 			path = 2015swiftSolutions;
 			sourceTree = "<group>";
@@ -120,6 +129,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3D45C125DD756E001B9893 /* main.swift in Sources */,
+				AB3D45CC25DD878E001B9893 /* day3.swift in Sources */,
+				AB3D45C925DD7583001B9893 /* day2.swift in Sources */,
+				AB3D45CF25DDA33B001B9893 /* helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
