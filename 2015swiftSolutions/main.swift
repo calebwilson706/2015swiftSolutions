@@ -15,3 +15,4 @@ var currentDay = Day3()
 timeTest(call: currentDay.part1, num: 1)
 timeTest(call: currentDay.part2, num: 2)
 
+//new comment
