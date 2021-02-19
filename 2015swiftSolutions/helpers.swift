@@ -18,3 +18,18 @@ func timeTest(call : () -> Void, num : Int, factor : Double = 1.0){
     call()
     print("test \(num) : \((CFAbsoluteTimeGetCurrent() - start)*factor)")
 }
+
+
+extension String {
+    func doesContainDoubleLetter() -> Bool {
+        let chars = [Character](self)
+        
+        for index in 0 ..< (chars.count - 1) {
+            if (chars[index] == chars[index + 1]){
+                return true
+            }
+        }
+        
+        return false
+    }
+}
