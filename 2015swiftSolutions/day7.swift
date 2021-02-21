@@ -31,6 +31,7 @@ class Day7 {
         let filePath = "/Users/calebjw/Documents/AdventOfCode/2015/inputs/Day7Input.txt"
         
         do {
+            
             let contents = try String(contentsOfFile: filePath)
             let rows = contents.components(separatedBy: "\n")
             
