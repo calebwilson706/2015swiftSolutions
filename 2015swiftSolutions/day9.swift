@@ -154,7 +154,7 @@ class Day9 {
         var currentMinimum = 1000
         for key in self.myGraph.adjacencyDict.keys.map({$0.data}) {
             let allPaths : [[String] : Int] = getPathsForUsage(starting: key)
-            let new = allPaths.filter( {$0.key.count == myGraph.adjacencyDict.count}).values.min() ?? currentMinimum
+            let new = allPaths.values.min() ?? currentMinimum
             //print(new)
             if  new < currentMinimum {
                 currentMinimum = new
@@ -164,11 +164,59 @@ class Day9 {
         
     }
     
+    func part1Optimised() {
+        var currentLowest = 1000
+        
+        func getPaths(from : GraphVertex<String>,
+                      amountOfLocationsVisited : Int,
+                      incomingWeight : Int = 0,
+                      currentTotal : Int = 0,
+                      offLimits : [String]
+             ){
+            
+            var mutableOffLimits = offLimits
+            mutableOffLimits.append(from.data)
+            
+            var mutableTotal = currentTotal
+            mutableTotal += incomingWeight
+            
+            var mutableAmountOfLocations = amountOfLocationsVisited
+            mutableAmountOfLocations += 1
+    
+            if mutableTotal > currentLowest {
+                return
+            }
+            
+            let next = myGraph.edges(from: from)!
+            
+            if next.map({ $0.destination.data }).sorted() == offLimits.sorted() {
+                if currentLowest > mutableTotal {
+                    currentLowest = mutableTotal
+                    return
+                }
+            }
+            
+            for item in next.filter({!mutableOffLimits.contains($0.destination.data)}) {
+                //print("\(item.source.data) -" + "> \(item.destination.data)")
+                getPaths(from: item.destination, amountOfLocationsVisited: mutableAmountOfLocations, incomingWeight: item.weight, currentTotal: mutableTotal, offLimits: mutableOffLimits)
+                
+            }
+            
+            
+        }
+        
+        for key in self.myGraph.adjacencyDict.keys {
+            getPaths(from: key, amountOfLocationsVisited: 0, offLimits: [])
+        }
+        
+        print(currentLowest)
+    }
+    
     func part2() {
         var currentMaximum = 0
         for key in self.myGraph.adjacencyDict.keys.map({$0.data}) {
             let allPaths : [[String] : Int] = getPathsForUsage(starting: key)
-            let new = allPaths.filter( {$0.key.count == myGraph.adjacencyDict.count}).values.max() ?? currentMaximum
+            let new = allPaths.values.max() ?? currentMaximum
             //print(new)
             if  new > currentMaximum {
                 currentMaximum = new

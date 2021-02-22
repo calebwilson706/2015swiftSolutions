@@ -11,7 +11,7 @@ print("Hello, World!")
 
 var currentDay = Day9()
 
-currentDay.part1()
-currentDay.part2()
-
+timeTest(call: currentDay.part1, num: 1)
+timeTest(call: currentDay.part1Optimised, num: 2)
+timeTest(call: currentDay.part2, num: 3)
 
