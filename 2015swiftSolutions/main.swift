@@ -9,9 +9,8 @@ import Foundation
 
 print("Hello, World!")
 
-var currentDay = Day9()
+var currentDay = Day12()
 
-timeTest(call: currentDay.part1, num: 1)
-timeTest(call: currentDay.part1Optimised, num: 2)
-timeTest(call: currentDay.part2, num: 3)
+timeTest(call: currentDay.part1, num: 1,factor: 1000)
+timeTest(call: currentDay.part2, num: 2,factor: 1000)
 
