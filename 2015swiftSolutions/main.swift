@@ -9,7 +9,7 @@ import Foundation
 
 print("Hello, World!")
 
-var currentDay = Day15()
-
+var currentDay = Day18()
 currentDay.part2()
+
 

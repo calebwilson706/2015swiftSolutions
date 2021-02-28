@@ -7,24 +7,6 @@
 
 import Foundation
 
-struct Point : Hashable {
-    let x : Int
-    let y : Int
-    
-    func up() -> Point {
-        return Point(x: x, y: y + 1)
-    }
-    func down() -> Point {
-        return Point(x: x, y: y - 1)
-    }
-    func right() -> Point {
-        return Point(x: x + 1, y: y)
-    }
-    func left() -> Point {
-        return Point(x: x - 1, y: y)
-    }
-}
-
 
 
 
