@@ -7,9 +7,9 @@
 
 import Foundation
 
-print("Hello, World!")
+var current = Day21()
 
-var currentDay = Day18()
-currentDay.part2()
+current.part2()
+
 
 
