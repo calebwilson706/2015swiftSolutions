@@ -7,9 +7,12 @@
 
 import Foundation
 
-var current = Day22()
+var current = Day23()
 
-current.part2()
+
+timeTest(call: current.part1, num: 1)
+timeTest(call: current.part2, num: 2)
+
 
 
 
